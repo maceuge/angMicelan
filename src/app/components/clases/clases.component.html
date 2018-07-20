@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+
+        <div [ngClass]="alerta" class="alert" role="alert">
+            A simple primary alert—check it out!
+        </div>
+
+        <button class="btn btn-outline-info mr-2" (click)="alerta = 'alert-info'">Bot1</button>
+        <button class="btn btn-outline-secondary" (click)="alerta = 'alert-secondary'">Bot2</button>
+
+        <hr>
+
+        <h2 [ngClass]="{'text-info': prop.color, 'text-danger': !prop.color}">
+            Hola! Cambiame de color con el boton de abajo
+        </h2>
+        <button (click)="prop.color = !prop.color" [ngClass]="{'btn-info': prop.color, 'btn-danger': !prop.color}" class="btn">Cambiar Color</button>
+        <hr>
+
+        <button (click)="ejecutar()" type="button" class="btn btn-primary">
+          <i class="fas" [ngClass]="{'fa-save': !loading, 'fa-sync-alt fa-spin': loading }" ></i>
+              Guardar Cambios
+        </button>
+    </div>
+</div>
