@@ -2,20 +2,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { USUARIO_ROUTES } from './components/usuario/usuario.routes';
+import { CycleComponent } from './components/cycle/cycle.component';
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'user', component: UsuarioComponent },
-   // { path: 'path3', component: Name3Component },
-   // { path: 'path4', component: Name4Component },
-    { path: '**', component: HomeComponent },
-
-    //{ path: 'path/:routeParam', component: MyComponent },
-    //{ path: 'staticPath', component: ... },
-    //{ path: '**', component: ... },
-    //{ path: 'oldPath', redirectTo: '/staticPath' },
-    //{ path: ..., component: ..., data: { message: 'Custom' }
+    { path: '', component: HomeComponent, data: { message: 'Hola soy HomeComponent'} },
+    { path: 'user/:id', component: UsuarioComponent, children: USUARIO_ROUTES},
+    { path: 'cycle', component: CycleComponent},
+    { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
 
 @NgModule({

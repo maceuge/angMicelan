@@ -1,3 +1,18 @@
-<p>
-  usuario works!
-</p>
+<div class="row">
+    <div class="col-md-12">
+
+        <h3 class="text-primary"><i class="fas fa-map-marked-alt"></i> Rutas Hijas</h3>
+        <hr>
+
+        <div class="text-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary" routerActiveLink="active, { exact: true; }" [routerLink]="['nuevo']">Nuevo</button>
+                <button type="button" class="btn btn-secondary" routerActiveLink="active, { exact: true; }" [routerLink]="['editar']">Editar</button>
+                <button type="button" class="btn btn-secondary" routerActiveLink="active, { exact: true; }" [routerLink]="['detalle']">Detalle</button>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
