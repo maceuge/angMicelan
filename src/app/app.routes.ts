@@ -1,14 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 
 const routes: Routes = [
-    { path: '', component: AppComponent },
-   // { path: 'path2', component: Name2Component },
+    { path: '', component: HomeComponent },
+    { path: 'user', component: UsuarioComponent },
    // { path: 'path3', component: Name3Component },
    // { path: 'path4', component: Name4Component },
-    { path: '**', component: AppComponent },
+    { path: '**', component: HomeComponent },
 
     //{ path: 'path/:routeParam', component: MyComponent },
     //{ path: 'staticPath', component: ... },

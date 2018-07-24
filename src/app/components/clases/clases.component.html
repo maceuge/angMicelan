@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-12">
 
         <div [ngClass]="alerta" class="alert" role="alert">
             A simple primary alert—check it out!
@@ -10,9 +10,9 @@
 
         <hr>
 
-        <h2 [ngClass]="{'text-info': prop.color, 'text-danger': !prop.color}">
+        <h4 [ngClass]="{'text-info': prop.color, 'text-danger': !prop.color}">
             Hola! Cambiame de color con el boton de abajo
-        </h2>
+        </h4>
         <button (click)="prop.color = !prop.color" [ngClass]="{'btn-info': prop.color, 'btn-danger': !prop.color}" class="btn">Cambiar Color</button>
         <hr>
 

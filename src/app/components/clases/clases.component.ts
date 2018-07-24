@@ -22,7 +22,7 @@ export class ClasesComponent implements OnInit {
   ejecutar () {
     this.loading = true;
     console.log(this.loading);
-    let time = setTimeout( () => console.log(this.loading = false) , 3000);
+    setTimeout( ()=> this.loading = true, 3000);
   }
 
 }
